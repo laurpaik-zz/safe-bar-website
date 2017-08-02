@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/ggwilliams/crime-website#readme",
   "dependencies": {
-    "express": "^4.15.3"
+    "express": "^4.15.3",
+    "spotcrime": "^1.0.1"
   }
 }
