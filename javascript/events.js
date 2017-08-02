@@ -1,6 +1,9 @@
 'use strict'
 
-const checkCrimes = function () {
+const checkCrimes = function (event) {
+	if (event && event.preventDefault) {
+		event.preventDefault()
+	}
 	console.log('GETTING TO THIS FUNCTION')
 	const latitude = $('#latitude').val()
 	const longitude = $('#longitude').val()
