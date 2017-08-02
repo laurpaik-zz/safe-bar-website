@@ -10,13 +10,11 @@ const checkCrimes = function () {
   	}
 	$.ajax({
 		url: 'http://localhost:3000/spotcrime',
-		method: 'POST',
+		method: 'GET',
 		data: data
 	}).done(function (results) {
 		console.log(results)
 	})
 }
 
-const addHandlers = () => {
   $('#get-crimes-form').on('submit', checkCrimes)
-}
