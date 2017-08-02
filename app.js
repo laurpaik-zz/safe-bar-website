@@ -3,6 +3,8 @@ const app = express()
 const spotcrime = require('spotcrime');
 const path = require('path');
 
+app.use(express.static(__dirname + '/javascript'))
+
 app.get('/', function (req, res) {
 //   res.send()
 	res.sendFile(path.join(__dirname + '/index.html'));
@@ -19,9 +21,11 @@ app.get('/spotcrime', function (req, res) {
 		// {city}
 	lat: 41.886393,
 	lon: -87.620037
+	// lat: {latitude},
+	// lon: {longitude}
 	};
 	
-	const radius = 0.01; // this is miles 
+	const radius = 0.1; // this is miles 
 	
 	spotcrime.getCrimes(loc, radius, function(err, crimes){
 		res.send(crimes)
